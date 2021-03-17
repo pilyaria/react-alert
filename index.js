@@ -38,85 +38,96 @@ ReactDOM.render(
   <>
     <Divider orientation="left">Добавление оповещения</Divider>
     <Row gutter={[8, 16]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={4}>
         <div style={style}>
-          Тип оповещения
-          <Cascader
+          <text>Тип оповещения </text>
+          
+        </div>
+      </Col>
+      <Col className="gutter-row" span={4}>
+      <div style={style}>
+        <Cascader size="small"
             defaultValue={['e-mail']}
             options={options}
             onChange={onChange}
           />
+          </div>
+      </Col>
+       <Col className="gutter-row" span={2}>
+        <div style={style}>
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
         
-          Choice(options.label)
+          Электронная почта
         
          
         </div>
       </Col>
     </Row>
     <Row gutter={[16, 24]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
-          Сообщений подряд
-          <InputNumber min={1} max={10} defaultValue={3} onChange={onChange} />
+          <text>Сообщений подряд </text>
+          <InputNumber size="small" min={1} max={10} defaultValue={3} onChange={onChange} />
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}><Checkbox onChange={onChange}>Отсутствие связи с прибором</Checkbox></div>
       </Col>
     </Row>
     <Row gutter={[16, 24]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Групповые условия</Checkbox>
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Срабатывание датчиков</Checkbox>
         </div>
       </Col>
     </Row>
     <Row gutter={[16, 24]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Контроль переменных</Checkbox>
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Сообщения о поверке</Checkbox>
         </div>
       </Col>
     </Row>
     <Row gutter={[16, 24]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Неверное время прибора</Checkbox>
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Изменение параметров прибора</Checkbox>
         </div>
       </Col>
     </Row>
      <Row gutter={[16, 24]}>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Условия прибора</Checkbox>
         </div>
       </Col>
-      <Col className="gutter-row" span={12}>
+      <Col className="gutter-row" span={10}>
         <div style={style}>
           <Checkbox onChange={onChange}>Высылать месячные отчёты</Checkbox>
         </div>
       </Col>
     </Row>
-    <Button type="primary">Добавить</Button>' '
+    <br></br>
+    <Button type="primary">Добавить</Button>
+    <a> </a>
     <Button>Отмена</Button>
   </>,
   document.getElementById('container'),
