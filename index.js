@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
-import { Row, Col, Divider, Checkbox, Cascader, InputNumber, Button } from 'antd';
+import { Row, Col, Divider, Checkbox, Cascader, InputNumber, Button, Select, Input } from 'antd';
 
 const style = { padding: '8px 0' };
 
@@ -16,6 +16,12 @@ const options = [
     label: 'sms',
   },
 ];
+
+const { Option } = Select;
+
+function handleChange(value) {
+  console.log(`selected ${value}`);
+}
 
 //функция изменения чекбокса
 function onChang(e) {
@@ -46,23 +52,18 @@ ReactDOM.render(
       </Col>
       <Col className="gutter-row" span={4}>
       <div style={style}>
-        <Cascader size="small"
-            defaultValue={['e-mail']}
-            options={options}
-            onChange={onChange}
-          />
+            <Select defaultValue="e-mail" size="small" /* style={{ width: 100 }}*/ onChange={handleChange}>
+            <Option value="sms">SMS</Option>
+            <Option value="e-mail">e-mail</Option>
+          </Select>
           </div>
       </Col>
-       <Col className="gutter-row" span={2}>
-        <div style={style}>
-        </div>
+      <Col className="gutter-row" span={5}>
+        <div style={style}>Электронная почта</div>
       </Col>
-      <Col className="gutter-row" span={10}>
+      <Col className="gutter-row" span={5}>
         <div style={style}>
-        
-          Электронная почта
-        
-         
+          <Input size="small" placeholder="pilyar@teplo-inform.ru" />
         </div>
       </Col>
     </Row>
